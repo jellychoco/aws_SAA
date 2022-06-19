@@ -1,1 +1,1 @@
-# aws_SAA
+This Repository is to study for AWS Solution Arthitect Associate exam
