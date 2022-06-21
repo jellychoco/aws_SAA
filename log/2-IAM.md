@@ -51,10 +51,11 @@
   1. Access key: Enalbes an access key ID and secret access key for the AWS API, CLI, SDK, and other development tools
 
   2. password: Enables a password that allows users to sign-in to the AWS management console
+     d
 
 - Policies inheritance
 
-  1. can create inline policy for who is not included the group user
+  1. Inline policy can be created for who is not included the group user
 
 - Policies Structure
 
