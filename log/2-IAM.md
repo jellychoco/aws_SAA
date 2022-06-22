@@ -145,3 +145,38 @@
        1. EC2 Instance Roles
        2. Lambda Function Roles
        3. Roles for CloudFormation
+
+- IAM Security Tools
+
+  1. IAM Credential Report (account-level)
+
+  - a report that lists all your account's users and the status of their various credentials
+
+  2. IAM Access Advisor (user-level)
+
+  - Access advisor shows the service permissions granted to a user an when those services were last accessed
+
+- IAM Guidelines & Best Practices
+
+  1. Don't use the root account except for AWS account setup
+  2. One physical user = One AWS user
+  3. Assign users to groups and assign permissions to group
+  4. create a strong password policy
+  5. Use and enforce the use of MFA
+  6. Create and use Roles for giving permissions to AWS services
+  7. Use Access Keys for Programmatic Access(CLI / SDK)
+  8. Audit permissions of your account with the IAM credential Report
+  9. Never share IAM users & Access Keys
+
+- Summary
+
+1. Users : mapped to a physical user, has a password for AWS console
+2. Groups : contains users only
+3. Policies : JSON document that outlines permissions for users or groups
+4. Roles : for EC2 instanfces or AWS services
+5. Security : MFA + STrong Password
+6. Access Keys : access AWS using the CLI or SDK
+7. Audit : IAM Credential Reports & IAM Access Advisor
+
+ <!-- IAM 정책의 문장(Statement)은 시드, 효과, 원칙, 조치, 리소스, 그리고 조건으로 구성됩니다. 버전은 IAM 정책 자체의 일부이지, 문장의 일부가 아닙니다. -->
+ <!-- IAM 사용자 그룹은 IAM 사용자 및 기타 사용자 그룹을 포함할 수 있습니다. -->
