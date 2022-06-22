@@ -89,6 +89,59 @@
      - Condition: conditions for when this policy is in effect(optional)
 
 - Multi Factor Authentication( MFA )
+
   1. Users have access to your account and can possibly change configurations or delete resources in your aws account
   2. You want to protect your Root Accounts and Iam users,
      use MFA(password + security device you own)
+  3. Choose the type of MFA device to assign:
+     - Virtual MFA device
+     - U2F security key
+     - other hardware MFA device
+
+- How can users access AWS
+
+  1. To access AWS, you have three options:
+
+     1. AWs Management Console(protectd by password + MFA)
+
+     2. AWs command line interface(CLI): protected by access keys
+
+     3. awss software Developer kit(SDK) - for code: protect by access keys
+
+  2. Access Keys are generated through the AWS console
+
+  3. Users manage their own access keys
+
+  4. Access Keys are secret, just like a password. Dont't share them
+
+  5. Access key ID = username
+
+  6. Secret Access Key = password
+
+- What's the AWS CLI
+
+  1. A tool that enalbes you to interact with AWS services using commands in your command-line shell
+
+  2. It can be direct access to the public APIs of AWS services
+
+  3. command:
+     - aws configure : setup user and region
+     - aws iam list-users : show users
+     - echo "test" > demo.txt (create txt file)
+
+- what's the AWS SDK
+
+  1. AWs software development kit
+  2. Embedded within your app
+
+- IAM Roles for Services
+
+  1. Some AWS Service will need to perform actions on your behalf
+
+  2. To do so, we will assign permissions to AWS services with IAM Roles, this mean is if EC2 wanna do some actions, EC2 needs permissions
+     ![alt text](../assets/1.png)
+
+     - common roles:
+       1. EC2 Instance Roles
+       2. Lambda Function Roles
+       3. Roles for CloudFormation
