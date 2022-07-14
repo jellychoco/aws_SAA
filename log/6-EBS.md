@@ -24,6 +24,20 @@
 - io1 / io2 (4GiB - 16TiB)
   - Max PIOPS:64,000 for Nitro EC2
 
-## SUMMARY
+## EBS SUMMARY
 
 ![alt text](../assets/10.png)
+
+1. need over 32,000 IOPS is proper io1 or io2 EC2 Nitro
+
+## 3. EFS PERFORMANCE & STORAGE CLASSES
+
+1. EFS SCale
+
+   - 1000s of concurrent NFS clients, 10 GB+ /s throughput
+   - Grow to Petabyte-scale network file system, automatically
+
+2. Performance mode(set at EFS creation time)
+
+   - General purpose : latency-senstitive use cases (web server, CMS, etc...)
+   - Max I/O - higher latency, throughput, highly parallel (big data, media processing)
