@@ -39,3 +39,30 @@
 
 4. Tips
    - Not allow instance access directly, block instance security group, setup security group to elb
+
+
+### 
+
+1. Application Load balancer
+   - layer 7 http only
+   - load balancing to multiple http applications across machines(target groups)
+   - lb to multiple app on the same machine (containers)
+   - Support for http/2 and websocket
+   - Support redirects (from http to https as a example)
+   - Routing tables to diffrent target groups:
+   - Routing based on path in URL 
+   - ALB are a great fit for micro services & container-based app (docker & ecs)
+   - Has a port mapping feature to redirect to a dynamic port in ECS
+   - CLB vs ELB
+     - CLB need per app
+     - ELB need only one 
+   ![alt text](../assets/11.png)
+
+2. Target Groups
+   - EC2 instances (can be managed by Auto Scaling Group) - http
+   - ECS tasks 
+   - Lambda functions
+   - IP addresses - must be private IPs
+   - ALB can route to multiple target groups
+   - Health checks are at the target group level
+  
