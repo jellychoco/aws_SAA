@@ -142,3 +142,25 @@
   8.  Load Balancer
 - Min Size / Max Size / Initial Capacity
 - Scaling Policies
+
+2. Dynamic Scaling Policies
+
+- Target Tracking Scaling
+  1. Most simple and easy to set up
+  2. Example: CPU stay at around 40% set
+- Simple / Step scaling
+  1.  CPU > 70%, then add 2 units
+  2.  CPU < 30%, then remove 1 unit
+- Scheduled Actions
+  1. Anticipate a scaling based on known usage patterns
+  2. Example: increase the min capacity to 10 at 5pm on friday
+
+3. Predictive Scaling
+
+- Predictive scaling: continuously forecast load and schedule scaling ahead
+  ![alt text](../assets/15.png)
+
+4. Good metrics to scale on
+   - CPU utilization: Average CPU utilization across your instances
+   - RequestCountPerTarget: to make sure the number of requests per EC2 instance is stable
+   - Average Network In / Out: 네트워크에서 병목현상이 발생할것 같은경우 평균 네트워크 입출력량을 기반으로 스케일링을 수행
