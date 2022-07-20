@@ -112,3 +112,33 @@
       1. 교차영역 로드밸런싱은 ALB 에 default 활성화 되어있다. cant'be disabled, No charges for inter AZ data
       2. NLB의 경우에는 default 비활성화다. 따라서 pay charges for inter AZ data if enabled
       3. CLB 는 defulat 비활성화, no charges for inter AZ data
+
+### SSL/TLS - Basics
+
+1. 클라이언트와 로드밸런서 사이에서 전송 중에 있는 트래픽을 암호화 할수 있다(in-flight encryoption)
+2. TLS 는 SSL 의 최신버전으로, 전송계층 보안을 의미(Transport Layer SEcurity)
+
+### Conneciton Draining
+
+- Feature naming
+
+  1.  Connection Draining - for CLB
+  2.  Deregistration Delay - for ALB & NLB
+
+- Stops sending new requests to the EC2 instance which is de-registering
+
+### Auth Scaling Group = ASG
+
+1.  ASG Attributes
+
+- Launch Template 설정 필요
+  1.  AMI + Instance Type
+  2.  EC2 User Data
+  3.  EBS Volumes
+  4.  Security Group
+  5.  SSH Key Pair
+  6.  IAM Roles for your EC2 Instance
+  7.  Network + Subnets information
+  8.  Load Balancer
+- Min Size / Max Size / Initial Capacity
+- Scaling Policies
